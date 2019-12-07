@@ -73,6 +73,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\WatermarkTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -127,12 +130,103 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Resources\Fonts\Antonine\Antonine.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.smallcaps-bold.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.smallcaps-demibold.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.smallcaps-extraligh.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.smallcaps-light.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.smallcaps-regular.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.smallcaps-thin.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.smallcaps-ultraligh.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.text-trial-bold.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.text-trial-demibold.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.text-trial-extralight.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.text-trial-hairline.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.text-trial-light.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.text-trial-regular.ttf" />
+    <None Include="Resources\Fonts\Aristotelica\aristotelica.text-trial-thin.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-Black.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-BlackItalic.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-Bold.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-BoldItalic.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-ExtraBold.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-ExtraLight.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-Italic.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-Light.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-LightItalic.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-Medium.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-MediumItalic.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-Regular.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-SemiBold.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-Thin.ttf" />
+    <None Include="Resources\Fonts\Montserrat\Montserrat-ThinItalic.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-Bold.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-BoldItalic.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-ExtraBold.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-ExtraBoldItalic.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-Italic.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-Light.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-LightItalic.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-Regular.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-SemiBold.ttf" />
+    <None Include="Resources\Fonts\Open Sans\OpenSans-SemiBoldItalic.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-Black.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-BlackItalic.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-Bold.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-BoldItalic.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-ExtraBold.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-ExtraBoldItalic.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-ExtraLight.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-ExtraLightItalic.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-Italic.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-Light.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-LightItalic.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-Medium.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-MediumItalic.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-Regular.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-SemiBold.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-SemiBoldItalic.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-Thin.ttf" />
+    <None Include="Resources\Fonts\Poppins\Poppins-ThinItalic.ttf" />
+    <None Include="Resources\Fonts\Quicksand\Quicksand-Bold.ttf" />
+    <None Include="Resources\Fonts\Quicksand\Quicksand-Light.ttf" />
+    <None Include="Resources\Fonts\Quicksand\Quicksand-Medium.ttf" />
+    <None Include="Resources\Fonts\Quicksand\Quicksand-Regular.ttf" />
+    <None Include="Resources\Fonts\Quicksand\Quicksand-SemiBold.ttf" />
+    <None Include="Resources\Fonts\Quicksand\Quicksand-VariableFont_wght.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-Black.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-BlackItalic.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-Bold.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-BoldItalic.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-ExtraBold.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-ExtraBoldItalic.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-ExtraLight.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-ExtraLightItalic.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-Italic.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-Light.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-LightItalic.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-Medium.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-MediumItalic.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-Regular.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-SemiBold.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-SemiBoldItalic.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-Thin.ttf" />
+    <None Include="Resources\Fonts\Raleway\Raleway-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Logo.JPG" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Content Include="Resources\Fonts\Antonine\Antonine License.txt" />
+    <Content Include="Resources\Fonts\Aristotelica\Aristotelica License.txt" />
+    <Content Include="Resources\Fonts\Montserrat\OFL.txt" />
+    <Content Include="Resources\Fonts\Open Sans\LICENSE.txt" />
+    <Content Include="Resources\Fonts\Poppins\OFL.txt" />
+    <Content Include="Resources\Fonts\Quicksand\OFL.txt" />
+    <Content Include="Resources\Fonts\Raleway\OFL.txt" />
     <Content Include="Resources\Logo.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

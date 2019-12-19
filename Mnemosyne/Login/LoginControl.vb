@@ -4,8 +4,7 @@
     Private PasswordInput As WatermarkTextBox
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
-        'UsernameInput.Text
-        'PasswordInput.Text
+        Credentials.Submit(UsernameInput.Text, PasswordInput.Text)
     End Sub
 
     Private Sub RegisterButton_Click(sender As Object, e As EventArgs) Handles RegisterButton.Click

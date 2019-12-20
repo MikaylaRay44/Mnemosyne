@@ -4,11 +4,12 @@
     Private PasswordInput As WatermarkTextBox
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
-        Credentials.Submit(UsernameInput.Text, PasswordInput.Text)
+        ' TODO: ...
+        'Credentials.Submit(UsernameInput.Text, PasswordInput.Text)
     End Sub
 
     Private Sub RegisterButton_Click(sender As Object, e As EventArgs) Handles RegisterButton.Click
-
+        ' TODO: Make Registration UserControl ...
     End Sub
 
     Private Sub RecoverButton_Click(sender As Object, e As EventArgs) Handles RecoverButton.Click

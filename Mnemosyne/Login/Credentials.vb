@@ -5,7 +5,7 @@ Public Module Credentials
 #Region "Declarations"
 
     Private Const CREDENTIALS_DATABASE_PATH As String = "C:\Program Files\Mnemosyne\Databases\credentials.db"
-    Private Const CREDENTIALS_DATABASE_CONNECTION As String = "Data Source=C:\Program Files\Mnemosyne\Databases\credentials.db;Version=3;"
+    Private Const CREDENTIALS_DATABASE_CONNECTION As String = "Data Source=C:\Z\Mnemosyne\Databases\credentials.db;Version=3;"
 
     Private Structure CredentialsDatabaseTables
         Public Const CREDENTIALS As String = "Credentials"
@@ -35,9 +35,9 @@ Public Module Credentials
         Dim hashTool As New Rfc2898DeriveBytes(password, salt)
         hashTool.IterationCount = 1000
         Dim data() As Byte = hashTool.GetBytes(password)
-        Dim hash() As Byte = serviceProvider.ComputeHash(data) ' TODO: hash as a string for db
+        Dim hash() As Byte = serviceProvider.ComputeHash(data) ' TODO: store hash in db with salt?
 
-        ' TODO: Make creat a password menu ...
+        ' TODO: Make create a password menu ...
 
     End Function
 

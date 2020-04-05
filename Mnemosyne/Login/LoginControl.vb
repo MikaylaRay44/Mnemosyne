@@ -1,5 +1,7 @@
 ﻿Public Class LoginControl
 
+    Public Event SwitchToRegisterControl()
+
     Private UsernameInput As WatermarkTextBox
     Private PasswordInput As WatermarkTextBox
 
@@ -9,7 +11,7 @@
     End Sub
 
     Private Sub RegisterButton_Click(sender As Object, e As EventArgs) Handles RegisterButton.Click
-        ' TODO: Make Registration UserControl ...
+        RaiseEvent SwitchToRegisterControl()
     End Sub
 
     Private Sub RecoverButton_Click(sender As Object, e As EventArgs) Handles RecoverButton.Click
@@ -35,7 +37,7 @@
             .BorderStyle = BorderStyle.None,
             .CausesValidation = False
         }
-        UsernameTableLayoutPanel.Controls.Add(usernameInput, 1, 0)
+        UsernameTableLayoutPanel.Controls.Add(UsernameInput, 1, 0)
 
         ' Add Password Watermark Text Box
         PasswordInput = New WatermarkTextBox With {
@@ -50,7 +52,7 @@
           .PasswordChar = "*",
           .CausesValidation = False
         }
-        PasswordTableLayoutPanel.Controls.Add(passwordInput, 1, 0)
+        PasswordTableLayoutPanel.Controls.Add(PasswordInput, 1, 0)
 
     End Sub
 
